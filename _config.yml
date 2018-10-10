@@ -1,22 +1,24 @@
 # Site settings
-title: Yang Ming's Blog
-SEOTitle: Yangming | Yangming's Blog
+title: Weekend
+SEOTitle: 热心的博客 | Weekend
 header-img: img/home-bg.jpg
-email: yondmn@gmail.com
-description: "Waiting for me to get better, i'll try the best to..."
-keyword: ""
-url: "//ym250.cn"              # your host, for absolute URL
-baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+email: admin@sunnyrx.com
+description: "Weekend. We can."
+keyword: "热心人士, SunnyRx, 热心人士的博客, 游戏, @SunnyRx, 群晖, NAS"
+url: "https://sunnyrx.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-
+# Publish posts or collection documents with a future date.
+future: true
 
 # SNS settings
-RSS: false
-weibo_username:     yondmn
-# zhihu_username:     yondmn
-github_username:    yondmn
-twitter_username:  yondmn
-facebook_username:  yondmn
+RSS: true
+weibo_username:     SunnyRx
+#zhihu_username:    SunnyRx
+github_username:    SunnyRx
+twitter_username:   SunnyRx
+#facebook_username: SunnyRx
+# linkedin_username:  firstname-lastname-idxxxx
 
 
 
@@ -25,14 +27,17 @@ facebook_username:  yondmn
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
 
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
 
 
 
@@ -43,33 +48,36 @@ gems: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+disqus_username: SunnyRx
 
-# Duoshuo settings
-duoshuo_username: 
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
-
+# Netease setttings
+netease_comment: false
 
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+ba_track_id: 81f5525033c6774262ce60bfdf938b0e
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-71624738-1'            # Format: UA-xxxxxx-xx
+ga_domain: sunnyrx.com
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "多打怪，多升级，让自己变强大。"
-sidebar-avatar: /img/avatar-ym.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "热爱生活和追梦的魔法师。傻傻的，就是想做自己想做的事情。"
+sidebar-avatar: /img/avatar-rx.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -79,16 +87,41 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
 # Friends
 friends: [
     {
-        title: "帅小陶",
-        href: "https://ht920.com"
-    },{
-        title: "Yondmn",
-        href: "//ym250.cn"
-    },{
-        title: "百威",
-        href: "//baiwn.com"
+        title: "Asterisk Blog",
+        href: "http://www.liangyuekang.net/"
+    },
+    {
+        title: "Ceplavia的游戏评测站点",
+        href: "http://www.ceplavia.com/"
+    },
+    {
+        title: "Gzp的博客",
+        href: "http://www.elfgzp.cn/"
+    },
+    {
+        title: "Kuma的博客",
+        href: "http://zero.sundaystart.net/"
+    },
+    {
+        title: "Ruter的博客",
+        href: "http://blog.ruterly.com/"
+    },
+    {
+        title: "妖孽的简书",
+        href: "http://www.jianshu.com/users/148cab15306f"
+    },
+    {
+        title: "纸箱猪的技艺空间",
+        href: "http://zxtechart.com/"
     }
 ]
