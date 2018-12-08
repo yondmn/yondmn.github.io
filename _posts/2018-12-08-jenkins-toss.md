@@ -4,14 +4,13 @@ title:      "Jenkins 折腾记"
 subtitle:   " \"Hello Jenkins, build anything\""
 date:       2018-12-08
 author:     "Yondmn"
-header-img: "img/pwa-hero.jpg"
+header-img: "img/post-bg-jenkins.png"
 tags:
     - Jenkins
 ---
 
 # Jenkins 折腾记
 
-![Jenkins](/img/2018-12-08-jenkins-toss/jenkins.png)
 
 公司使用了也挺长一段时间 “傻瓜式” 的一条龙服务发布构建打包系统，对其一系列流程有些好奇，遂下决心一定要弄个明白，作为一个有志青年总不能啥事都稀里糊涂的做了呀哈哈哈哈🤣🤣🤣🤣🤣🤣🤣🤣。
 
@@ -68,19 +67,19 @@ OK, let's face it.
 
 首先看一下 Jenkins 首页面板是这个样子
 
-![Jenkins dashboard](/img/2018-12-08-jenkins-toss/1544277445736.jpg)
+![Jenkins dashboard](/img/in-post/2018-12-08-jenkins-toss/1544277445736.jpg)
 
 然后选择 `new 任务`，创建一个构建项目，进入到下面这样的一个界面，给任务起一个响亮的名字，然后再选择 `构建一个自由风格的软件项目`。
 
-![new task](/img/2018-12-08-jenkins-toss/1544277629731.jpg)
+![new task](/img/in-post/2018-12-08-jenkins-toss/1544277629731.jpg)
 
 创建好构建项目后，就直接进入到了该任务的配置页面，如下图：
 
-![configure page](/img/2018-12-08-jenkins-toss/1544277751102.jpg)
+![configure page](/img/in-post/2018-12-08-jenkins-toss/1544277751102.jpg)
 
 因为本测试用例是 Github 上的项目，所有在配置页面上勾选上了 `github 项目` 和 `Git` 两个选项。然后再巴拉巴拉写一点 `Discription`，填好 Github 的项目 `项目 URL` ，再填写下面 Git 的 `Repository URL` 仓库地址，如下：
 
-![configure](/img/2018-12-08-jenkins-toss/1544277861720.jpg)
+![configure](/img/in-post/2018-12-08-jenkins-toss/1544277861720.jpg)
 
 **敲黑板啦**
 
@@ -96,25 +95,25 @@ OK, let's face it.
 1. 第一种问题就到 Jenkins 安装的服务器上把 Git 给安装上就好了，也就是执行一下 `yum install git` 。
 2. 第二个就在 `Jenkins` -> `系统管理` -> `全局工具配置` 页面里面的 `	Path to Git executable` 的 Git 执行路径填一下像下面这样
 
-![Path to Git executable](/img/2018-12-08-jenkins-toss/1544278998918.jpg)
+![Path to Git executable](/img/in-post/2018-12-08-jenkins-toss/1544278998918.jpg)
 
 **至此**
 
 第一个任务已经可以进行构建了，在首页点进去任务名称比如我的叫 react ，进入下面的页面然后点击左侧的立即构建就可以进行构建任务了。
 
-![build task](/img/2018-12-08-jenkins-toss/1544279397600.jpg)
+![build task](/img/in-post/2018-12-08-jenkins-toss/1544279397600.jpg)
 
 ⬆️ 每次构建都在左下方 `build history` 生成一个构建历史。红色表示构建失败，蓝色表示构建成功。
 
 最开始我构建出现了很多的构建失败任务，Google 了一大堆也没解决。比如像下面这样的错误
 
-![build failed](/img/2018-12-08-jenkins-toss/1544279472218.jpg)
+![build failed](/img/in-post/2018-12-08-jenkins-toss/1544279472218.jpg)
 
 搞了半天也没解决，然后在 Jenkins 选择 `系统设置` 的时候发现能直接升级 Jenkins 。然后选择升级，等了一会 Jenkins 升级成功再构建则成功了👹。。。。
 
 然后就可以在任务 react 的配置页中继续添加要构建的具体任务
 
-![-w979](/img/2018-12-08-jenkins-toss/1544282913421.jpg)
+![-w979](/img/in-post/2018-12-08-jenkins-toss/1544282913421.jpg)
 
 随便添加了两行命令，还可以执行具体是 shell 脚本进行为所欲为啦哈哈
 

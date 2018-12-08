@@ -4,7 +4,7 @@ title:      "PWA 学习总结 三"
 subtitle:   " \"Hello PWA, Reliable Fast Engaging\""
 date:       2018-11-14
 author:     "Yondmn"
-header-img: "img/pwa-hero.jpg"
+header-img: "img/post-bg-pwa.png"
 tags:
     - JS
     - PWA
