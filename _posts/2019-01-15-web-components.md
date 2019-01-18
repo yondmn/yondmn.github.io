@@ -119,11 +119,13 @@ customElements.define('test-com', TestComponent);
 
 上面构造函数中写的一些操作基本上都是一些 Javascript 操作 DOM 的方法，所以实现起来还是很简单的，代码中注释的 mode 字段的意思和区别看一下下面具体的两个图就可以明白了
 
-> mode: open
+**mode: open**
+
 ![](http://assets.ym250.cn/9bc7125681016ce7e0934f5c481b8d69.jpg)
 
 
-> mode: closed
+**mode: closed**
+
 ![](http://assets.ym250.cn/829fe95597adc48ee1e774413c63df85.jpg)
 
 
